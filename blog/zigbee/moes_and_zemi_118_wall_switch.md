@@ -100,9 +100,9 @@ Z2M資訊
 
 Z2M資訊
 
-![zemi](attachments/zemi_wall_switch/wall_switch/z2m_1.jpg)
+![zemi](attachments/zemi_wall_switch/z2m_1.jpg)
 
-![zemi](attachments/zemi_wall_switch/wall_switch/z2m_2.jpg)
+![zemi](attachments/zemi_wall_switch/z2m_2.jpg)
 
 ### 👍優點
 
