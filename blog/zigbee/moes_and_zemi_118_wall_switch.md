@@ -13,8 +13,6 @@
 - [MOES單零火通用Zigbee三路開關(ZS-B-US)](#moes智慧開關)
 - [zemi智美零火Zigbee雙路開關(KES-606US)](#zemi智美智慧開關)
 
----
-
 ## MOES智慧開關
 
 外觀一覽
@@ -84,8 +82,6 @@ Z2M資訊
 
 ![moes](attachments/moes_wall_switch/4.jpg)
 
----
-
 ## zemi智美智慧開關
 
 外觀一覽
@@ -148,8 +144,6 @@ Z2M資訊
 此產品尺寸寬高深為`116*72*35`，一樣要注意尺寸。
 
 > 入牆尺寸約`25mm`
-
----
 
 ## 免責聲明
 
