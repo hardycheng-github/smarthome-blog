@@ -1,6 +1,6 @@
 歡迎來到哈迪智慧家庭分享專區。
 
-## `Zigbee系列`
+## Zigbee系列
 
 ![zigbee](icons/zigbee.png)
 
@@ -17,7 +17,7 @@
 - [哈迪碎念 - 居家Zigbee系列：(不推) 電池版人在感應]()
 - [哈迪碎念 - 居家Zigbee系列：(不推) 白牌隨意貼開關]()
 
-## `Bluetooth系列`
+## Bluetooth系列
 
 ![bluetooth](icons/bluetooth.png)
 
@@ -29,13 +29,13 @@
 
 - 暫無
 
-## `閒聊雜談系列`
+## 閒聊雜談系列
 
 ![talk](icons/talk.png)
 
 - [哈迪碎念 - 閒聊系列：外網斷線時對於HA的影響]()
 
-## `商城`
+## 商城
 
 ![711](icons/store711.jpg)
 
