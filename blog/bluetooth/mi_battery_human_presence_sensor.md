@@ -303,7 +303,7 @@ Yes, 這篇是哈迪首個Bluetooth系列文章!
 
 看本文影片就知道怎麼裝了
 
-![3.mp4](3.mp4)
+https://github.com/user-attachments/assets/43401733-0a07-4975-8bc0-b97dbc3e0a2e
 
 太空人支架價格不算便宜 (一個100~200台幣)
 
@@ -317,9 +317,10 @@ Yes, 這篇是哈迪首個Bluetooth系列文章!
 
 磁吸的方式可以參考本文影片
 
-![1.mp4](1.mp4)
 
-![2.mp4](2.mp4)
+https://github.com/user-attachments/assets/c0c6e297-80cb-4ac2-b7ed-09437274f012
+
+https://github.com/user-attachments/assets/62a9c0ce-549b-4aa5-9bb1-e3c47039b34f
 
 ---
 
