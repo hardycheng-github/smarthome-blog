@@ -14,7 +14,7 @@
 
 ### 👎不推列表
 
-- [居家Zigbee系列：(不推) 電池版人在感應](blog/zigbee/tuya_battery_human_presense_sensor.md)
+- [居家Zigbee系列：(不推) 電池版人在感應](blog/zigbee/tuya_battery_human_presence_sensor.md)
 - [居家Zigbee系列：(不推) 白牌隨意貼開關](blog/zigbee/tuya_battery_switch.md)
 
 ## Bluetooth系列
@@ -23,7 +23,7 @@
 
 ### 👍推薦列表
 
-- [居家Bluetooth系列：小米電池人在感應器](blog/bluetooth/mi_battery_human_presense_sensor.md)
+- [居家Bluetooth系列：小米電池人在感應器](blog/bluetooth/mi_battery_human_presence_sensor.md)
 
 ### 👎不推列表
 
