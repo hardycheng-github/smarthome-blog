@@ -342,7 +342,7 @@ BLE裝置是採用**廣播**的方式傳遞訊息
 
 電池更換方法請參考以下影片
 
-https://github.com/user-attachments/assets/9001b04b-92e9-4131-ad15-be10a2c7a542
+https://github.com/user-attachments/assets/0e56d258-656d-4454-814f-cec6d14bec47
 
 ## 從零開始接入HA
 
@@ -363,7 +363,7 @@ https://github.com/user-attachments/assets/9001b04b-92e9-4131-ad15-be10a2c7a542
 
 參考以下影片將感應器與米家APP做配對
 
-https://github.com/user-attachments/assets/cda3a2be-5a22-4195-b854-cf1d732bf143
+https://github.com/user-attachments/assets/d14a5bd2-51a9-4107-b00e-99d7c898de06
 
 接著在Home Assistant設定感應器
 
@@ -391,7 +391,7 @@ https://github.com/user-attachments/assets/0df20513-8b10-48c3-9cb1-ab312afaa5d7
 
 當有人經過玄關時三者的觸發能力不相上下
 
-https://github.com/user-attachments/assets/b180ae7a-b79e-43af-b9f8-f83d6db3ef11
+https://github.com/user-attachments/assets/7b626bd0-ecab-409c-a7eb-bad382395cd9
 
 隔天比對最多人出入的時間段
 
