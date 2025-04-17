@@ -391,7 +391,7 @@ https://github.com/user-attachments/assets/0df20513-8b10-48c3-9cb1-ab312afaa5d7
 
 當有人經過玄關時三者的觸發能力不相上下
 
-https://github.com/user-attachments/assets/535a7248-87e4-4b41-96ea-5e67f8c2179a
+https://github.com/user-attachments/assets/b180ae7a-b79e-43af-b9f8-f83d6db3ef11
 
 隔天比對最多人出入的時間段
 
