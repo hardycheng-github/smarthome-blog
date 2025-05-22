@@ -46,7 +46,7 @@ Zemismart推出很酷的觸控型開關
 
 > 注意！大部分智能開關做不到以上兩點
 
-https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
+https://github.com/user-attachments/assets/b39d16c5-231a-4574-9977-8a1fb93114c6
 
 ### 自動省電模式
 
