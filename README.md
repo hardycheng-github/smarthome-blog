@@ -11,6 +11,7 @@
 - [居家Zigbee系列：塗鴉Zigbee延長線](blog/zigbee/tuya_zigbee_power_strip.md)
 - [居家Zigbee系列：白牌門窗感應器](blog/zigbee/tuya_door_sensor.md)
 - [居家Zigbee系列：兩款無線旋鈕開關](blog/zigbee/moes_and_tuya_knob_switch.md)
+- [居家Zigbee系列：可自訂名稱的酷炫台灣零火開關](blog/zigbee/zemi_diy_name_118_wall_switch.md)
 
 ### 👎不推列表
 
