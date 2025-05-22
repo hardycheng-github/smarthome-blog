@@ -85,6 +85,8 @@ https://github.com/user-attachments/assets/b39d16c5-231a-4574-9977-8a1fb93114c6
 
 是我目前購買的所有牆壁開關最貴的
 
+> 跟台灣廠商的塗鴉Zigbee開關比起來還是小錢啦...
+
 ### Z2M支援尚不完整
 
 Z2M新版本`v2.3.0`支援雙鍵、三鍵、四鍵版本
