@@ -116,7 +116,7 @@ Z2M新版本`v2.3.0`支援雙鍵、三鍵、四鍵版本
 
 從`多鍵觸發`的影片可以看到這個問題
 
-https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
+https://github.com/user-attachments/assets/b39d16c5-231a-4574-9977-8a1fb93114c6
 
 ### 自動省電無法取消
 
