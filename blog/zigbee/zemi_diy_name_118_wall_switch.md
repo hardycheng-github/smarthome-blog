@@ -49,6 +49,8 @@ Zemismart推出很酷的觸控型開關
 
 https://github.com/user-attachments/assets/b39d16c5-231a-4574-9977-8a1fb93114c6
 
+> 名稱面板的低成本螢幕在攝影時有頻閃是正常現象，人類視覺上不會閃爍
+
 ### 自動省電模式
 
 此款產品內建人體感應器
