@@ -84,11 +84,11 @@ https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
 
 ### Z2M支援尚不完整
 
-Z2M新版本v2.3.0支援這款產品
+Z2M新版本`v2.3.0`支援雙鍵、三鍵、四鍵版本
 
-但尚不支援單鍵版
+但尚**不支援單鍵版**
 
-需要自己拿其他鍵的內容來生成**外部轉換器**
+單鍵版需要自己拿其他鍵的內容來生成**外部轉換器**
 
 對非專業玩家來說難度很高
 
@@ -150,6 +150,13 @@ https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
 
 ## 中文亂碼解決方案
 
+Z2M在設定按鍵名稱時不支援中文
+
+但可以透過兩種方法設定中文
+
+1. [接入塗鴉平台設定](#先接入塗鴉平台設定需要塗鴉網關)
+1. [編碼轉換](#透過iso-8859-1編碼轉換)
+
 ### 先接入塗鴉平台設定（需要塗鴉網關）
 
 在塗鴉平台透過Smart Life APP可以正常使用全功能
@@ -164,32 +171,34 @@ https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
 
 ### 透過ISO-8859-1編碼轉換
 
-經過哈迪辛苦的測試與研究
+經過長時間的測試與研究
 
 發現可以通過編碼ISO-8859-1（又稱latin-1）實現中文設定
 
 流程如下：
 
 1. 建立一個文字檔
-1. 將編碼切為UTF-8
-1. 輸入你要的中文
-1. 將編碼切成ISO-8859-1
+1. 將編碼切為`UTF-8`
+1. 輸入中文名稱（最多4字）
+1. 將編碼切成`ISO-8859-1`
 1. 完整複製內容並貼到Z2M設定
-1. 下一組文字轉換，從切為UTF-8開始重複以上流程
+1. 下一組文字轉換，從切為`UTF-8`開始重複以上流程
 
 以下測試幾種文字編輯器可支援編碼轉換
 
-- Notepad++（PC）
-- Visual Studio Code（PC）
-- QuickEdit（Android）
+- [Notepad++](https://notepad-plus-plus.org/downloads/v8.8.1/)（PC）
+- [Visual Studio Code](https://code.visualstudio.com/download)（PC）
+- [QuickEdit](https://play.google.com/store/apps/details?id=com.rhmsoft.edit&hl=zh_TW)（Android）
 
-### Notepad++操作範例
+### Notepad++操作範例（Win10）
 
 建立一個123.txt並輸入中文
 
 ![](attachments/zemi_zms206/Z2M中文解決方案/notepadpp1.png)
 
-編碼→字元集→西歐語系→ISO-8859-1
+按照下圖操作去選擇ISO-8859-1
+
+> 編碼→字元集→西歐語系→ISO 8859-1
 
 ![](attachments/zemi_zms206/Z2M中文解決方案/notepadpp2.png)
 
@@ -207,15 +216,15 @@ https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
 
 ![](attachments/zemi_zms206/Z2M中文解決方案/IMG_20250520_114429.jpg)
 
-### VSCode操作範例
+### VSCode操作範例（Win10）
 
 建立一個123.txt並輸入中文
-
-點選下方編碼（顯示UTF-8的位置）
 
 ![](attachments/zemi_zms206/Z2M中文解決方案/vscode1.png)
 
 按照下圖操作去選擇ISO-8859-1
+
+> UTF-8（右下角）→以編碼重新開啟→Western(ISO 8859-1)
 
 ![](attachments/zemi_zms206/Z2M中文解決方案/vscode2.png)
 
@@ -241,7 +250,7 @@ https://github.com/user-attachments/assets/94ce0dae-91bb-4ce7-8cdc-2e5ae7311e92
 - 如果編碼有做地區分類，試著尋找`西歐語系`
 - **不要使用線上網頁轉換器**，因網頁HTML可能會無法保留原始的latin-1內容
 
-## 其他小技巧
+## 其他建議
 
 ### 購買型號選擇
 
@@ -283,7 +292,7 @@ Z2M `v2.3.0`支援雙鍵、三鍵、四鍵
 - 三鍵：US$31.82（約NT$955）
 - 四鍵：US$33.30（約NT$999）
 
-官方賣場到台灣免運，但我是先送到大陸集運倉再走私人集運回台
+> 官方賣場到台灣似乎是免運，但個人是習慣先送到大陸集運倉再走私人集運回台
 
 撰寫此文時，廠家說淘寶官方尚未上架此產品
 
