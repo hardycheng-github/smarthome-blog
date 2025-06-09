@@ -14,6 +14,7 @@
 - [商店](#-商店)
 - [功能介紹及硬體拆解](#功能介紹及硬體拆解)
 - [中文亂碼解決方案](#中文亂碼解決方案)
+- [Z2M單鍵版的外部轉換器](#自訂外部轉換器)
 - [其他建議](#其他建議)
 - [官方賣場](#zemismart官方賣場)
 
@@ -109,6 +110,10 @@ Z2M新版本`v2.3.0`支援雙鍵、三鍵、四鍵版本
 單鍵版需要自己拿其他鍵的內容來生成**外部轉換器**
 
 對非專業玩家來說難度很高
+
+**（2025/6/3更新）**
+
+目前已經完成單鍵版外部轉換器開發，請至[單鍵版的外部轉換器](#自訂外部轉換器)查看
 
 另外Z2M部分參數設定會跳出錯誤訊息
 
@@ -281,6 +286,170 @@ Z2M在設定按鍵名稱時不支援中文
 - `ISO-8859-1`又稱`latin-1`，編碼中找到兩者之一都可以
 - 如果編碼有做地區分類，試著尋找`西歐語系`
 - **不要使用線上網頁轉換器**，因網頁HTML可能會無法保留原始的latin-1內容
+
+## 自訂外部轉換器
+
+**（2025/6/9更新）**
+
+截至目前`Z2M v2.3.0`仍**不支援**這款`一路（或稱單鍵）版本`的開關
+
+哈迪自己做了外部轉換器並測試可用
+
+免費提供給各位做使用
+
+本人不負責任何技術諮詢及軟硬體異常排查
+
+夥伴們可閱讀以下步驟後再決定是否實施
+
+### Z2M環境
+
+- Home Assistant Core `2025.5.3`
+- Zigbee2mqtt `v2.3.0-1`（附加元件）
+- HACS `v2.0.5`（非必要）
+
+### 升級Z2M
+
+請先將Z2M升級到`v2.3.0或以上`版本
+
+> 注意！升級前請做好備份。如果是舊版v1.x.x升級到v2.x.x，要有不相容的心理準備
+
+> 另外HA核心太舊也可能導致Z2M附加元件無法升級
+
+### 上傳圖片（非必要）
+
+上傳一路版本專用圖片
+
+> 此步驟非必要，可以跳過到[下個步驟](#上傳外部轉換器)
+
+以任何方式保存以下圖片
+
+![單路開關](external_converters/homeassistant/www/community/images/ZMS-206US-1.jpg)
+
+透過任何方式將圖片上傳至HA主機中
+
+以下是外部轉換器目前預設的HACS檔案路徑
+
+> 提示：`www`資料夾會跟`custom_components`在同一層目錄下
+
+```
+(你的HA根目錄)/www/community/images/ZMS-206US-1.jpg
+```
+
+如果你的HA環境沒有架設FTP伺服器，也無法使用ssh連線
+
+那麼可以使用HA側邊選單中內建的`File editor`去建立路徑及上傳圖片
+
+> 注意！資料夾及圖片檔案名稱必須一模一樣，小心錯別字！
+
+### 上傳外部轉換器
+
+> Z2M升級到v2.x.x才能使用以下外部轉換器方法
+
+下載或複製以下程式碼
+
+檔案連結：[ZMS-206US-1.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
+
+純文字連結：[ZMS-206US-1.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
+
+建立以下路徑檔案並貼上程式碼
+
+如果你是使用HA附加元件安裝Z2M，遵循以下路徑
+
+> 提示：`zigbee2mqtt`資料夾會跟`custom_components`在同一層目錄下
+
+```
+(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-1.js
+```
+
+如果是透過其他方法安裝Z2M，遵循以下路徑
+
+```
+(你的Z2M根目錄)/external_converters/ZMS-206US-1.js
+```
+
+> 注意！資料夾及程式碼檔案名稱必須一模一樣，小心錯別字！
+
+圖片路徑上傳至自定義位置的，請自行修改程式碼中的圖片路徑
+
+如果是按照上述HACS路徑上傳，或未上傳圖片的則略過
+
+```
+[59行] icon: '/hacsfiles/images/ZMS-206US-1.jpg?',
+```
+
+### 重啟Z2M並觀察日誌
+
+上述步驟完成後，請重新啟動Zigbee2mqtt
+
+如果是透過附加元件安裝的請遵循以下
+
+> 重啟Z2M需要時間，請耐心等候，直到Z2M操作介面可正常使用
+
+```
+設定→附加元件→Zigbee2mqtt→重啟
+```
+
+![](attachments/zemi_zms206/z2m_restart.png)
+
+重新啟動Z2M後建議前往同頁面右上角的`日誌`
+
+並輸入關鍵字`206US`觀察
+
+![](attachments/zemi_zms206/z2m_log.png)
+
+過段時間後應該出現**正確訊息**如下
+
+```
+[2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-1.js'.
+```
+
+**程式碼格式有誤**會出現類似以下訊息，請確認你的程式碼內容排版
+
+```
+[2025-06-09 16:40:57] error: 	z2m: Invalid external converter 'ZMS-206US-1.js' was ignored and renamed to prevent interference with Zigbee2MQTT.
+```
+
+**找不到外部轉換器**則不會出現任何訊息，請確認上傳檔案路徑及檔案讀取權限
+
+### 配對資訊
+
+將你的一路開關配對至Z2M後
+
+正常情況下你會看到如下資訊
+
+![](attachments/zemi_zms206/1way_info.png)
+
+公開控制項目如下
+
+> 移除了個人認為無用的功能：按鍵倒計時
+
+![](attachments/zemi_zms206/1way_ctl.png)
+
+如果你發現裝置仍然是未支援的狀態
+
+查看一下`Zigbee製造商`名稱是否為`_TZE204_sa2ueffe`或`_TZE284_sa2ueffe`
+
+如果不是，請自行修改外部轉換器`ZMS-206US-1.js`內容如下
+
+```
+[60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE204_sa2ueffe", "_TZE284_sa2ueffe"]),
+```
+
+在最後列表中加入你的製造商名稱（假設是`_ABC204_aabbccdd`）
+
+```
+[60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE204_sa2ueffe", "_TZE284_sa2ueffe", "_ABC204_aabbccdd"]),
+```
+
+> 注意！程式碼的排版格式很重要，請嚴格按照規則
+
+修改好之後再重新啟動Z2M並查看裝置是否支援
+
+### 恭喜完成外部轉換器！
+
+你成功完成了超困難的Z2M自訂外部轉換器
+
+趕快去跟親朋好友炫耀一下
 
 ## 其他建議
 
