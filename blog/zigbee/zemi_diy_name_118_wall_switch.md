@@ -347,6 +347,8 @@ Z2M在設定按鍵名稱時不支援中文
 
 下載或複製以下程式碼
 
+> 檔案連結、純文字連結，擇一使用
+
 檔案連結：[ZMS-206US-1.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
 
 純文字連結：[ZMS-206US-1.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
@@ -377,6 +379,14 @@ Z2M在設定按鍵名稱時不支援中文
 [59行] icon: '/hacsfiles/images/ZMS-206US-1.jpg?',
 ```
 
+檔案後綴加上`?`可以讓HA強制重載該檔案，避免圖片更換後UI顯示舊圖的問題
+
+每次更換圖片後可以使用`?`+`不同數字`去強制重載資源，例如以下
+
+```
+icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
+```
+
 ### 重啟Z2M並觀察日誌
 
 上述步驟完成後，請重新啟動Zigbee2mqtt
@@ -404,6 +414,8 @@ Z2M在設定按鍵名稱時不支援中文
 ```
 
 **程式碼格式有誤**會出現類似以下訊息，請確認你的程式碼內容排版
+
+> 注意！格式錯誤的外部轉換器副檔名會被改成`.invalid`，修改好內容後記得重新命名成`.js`，再重啟Z2M
 
 ```
 [2025-06-09 16:40:57] error: 	z2m: Invalid external converter 'ZMS-206US-1.js' was ignored and renamed to prevent interference with Zigbee2MQTT.
