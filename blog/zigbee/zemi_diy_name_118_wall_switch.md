@@ -349,9 +349,8 @@ Z2M在設定按鍵名稱時不支援中文
 
 > 檔案連結、純文字連結，擇一使用
 
-檔案連結：[ZMS-206US-1.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
-
-純文字連結：[ZMS-206US-1.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
+- 檔案連結：[ZMS-206US-1.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
+- 純文字連結：[ZMS-206US-1.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
 
 建立以下路徑檔案並貼上程式碼
 
