@@ -185,6 +185,45 @@ https://github.com/user-attachments/assets/b39d16c5-231a-4574-9977-8a1fb93114c6
 
 只有外觀不同，硬體及軟體則是完全相同
 
+以下圖片來源與說明參考自[SmartHomeScene 原文](https://smarthomescene.com/reviews/zemismart-zigbee-screen-switch-zms-206-review/)（86型規格）
+
+### 產品正面
+
+產品正面為玻璃面板設計，觸控按鍵搭配黑色顯示螢幕
+
+![](attachments/zemi_zms206/硬體拆解/正面.jpg)
+
+### 產品背面
+
+背面標示接線端子與規格資訊
+
+![](attachments/zemi_zms206/硬體拆解/背面.jpg)
+
+### 拆下面板
+
+拆下外框後可見內部結構，按鍵採用觸摸電容
+
+![](attachments/zemi_zms206/硬體拆解/拆下面板.jpg)
+
+
+### 內部主機板
+
+整體分為兩塊電路板，透過排針連接
+
+![](attachments/zemi_zms206/硬體拆解/主機板.jpg)
+
+### 繼電器與電源模組
+
+電源模組看起來很不錯，也是產品整體厚度的主因
+
+![](attachments/zemi_zms206/硬體拆解/繼電器.jpg)
+
+### 雷達感應器
+
+內建`HLK-LD1020`雷達模組，靠近時自動喚醒螢幕與指示燈，達到省電目的
+
+![](attachments/zemi_zms206/硬體拆解/雷達.jpg)
+
 ## 中文亂碼解決方案
 
 Z2M在設定按鍵名稱時不支援中文
