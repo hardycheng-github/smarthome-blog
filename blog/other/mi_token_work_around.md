@@ -106,11 +106,17 @@ https://xiaomi-token-web.asd.workers.dev/
 
 執行檔我已經從百度網盤移植到[本文此處](attachments/token_extractor-qr.zip)
 
+點選檔案右上角的`Download raw file`進行下載
+
+> 防毒機制可能會阻擋未知來源執行檔，請自行斟酌是否保留檔案
+
+![](attachments/mi_token_qr_download.jpg)
+
 ## 掃碼登入工具使用說明
 
 解壓縮後會看到一個Windows執行檔`token_extractor-qr.exe`
 
-> 未知的執行檔可能會被防毒軟體阻擋
+> 未知的執行檔可能會被防毒軟體禁止執行
 
 執行後請求輸入伺服器名稱，例如：`cn`或`tw`
 
