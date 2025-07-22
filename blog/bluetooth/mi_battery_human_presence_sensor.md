@@ -367,6 +367,8 @@ https://github.com/user-attachments/assets/d14a5bd2-51a9-4107-b00e-99d7c898de06
 
 接著在Home Assistant設定感應器
 
+> 2025/7/22更新：HA整合的小米藍芽金鑰提取流程暫時無法使用，請參考[以下文章](blog/other/mi_token_work_around.md)手動提取藍芽金鑰
+
 https://github.com/user-attachments/assets/0df20513-8b10-48c3-9cb1-ab312afaa5d7
 
 完整的數值列表可參考附圖
