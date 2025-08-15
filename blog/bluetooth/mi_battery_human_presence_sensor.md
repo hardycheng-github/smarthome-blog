@@ -367,7 +367,7 @@ https://github.com/user-attachments/assets/d14a5bd2-51a9-4107-b00e-99d7c898de06
 
 接著在Home Assistant設定感應器
 
-> 2025/7/22更新：HA整合的小米藍芽金鑰提取流程暫時無法使用，請參考[以下文章](blog/other/mi_token_work_around.md)手動提取藍芽金鑰
+> 2025/7/22更新：HA整合的小米藍芽金鑰提取流程暫時無法使用，請參考[以下文章](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/other/mi_token_work_around.md)手動提取藍芽金鑰
 
 https://github.com/user-attachments/assets/0df20513-8b10-48c3-9cb1-ab312afaa5d7
 
@@ -410,3 +410,4 @@ https://github.com/user-attachments/assets/7b626bd0-ecab-409c-a7eb-bad382395cd9
 本貼文沒有任何業配或推坑，純粹是個人經驗分享，高CP值的產品可能因為生產公差、用料、審美、個人運氣等因素導致每個人商品體驗不同，請謹慎評估後購買。
 
 [🧾去選單](../../README.md)
+
