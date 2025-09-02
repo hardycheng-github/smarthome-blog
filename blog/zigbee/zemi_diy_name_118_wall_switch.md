@@ -14,7 +14,7 @@
 - [商店](#-商店)
 - [功能介紹及硬體拆解](#功能介紹及硬體拆解)
 - [中文亂碼解決方案](#中文亂碼解決方案)
-- [Z2M單鍵版的外部轉換器](#自訂外部轉換器)
+- [自訂外部轉換器](#自訂外部轉換器)
 - [其他建議](#其他建議)
 - [官方賣場](#zemismart官方賣場)
 
@@ -320,6 +320,9 @@ Z2M在設定按鍵名稱時不支援中文
 
 截至目前`Z2M v2.3.0`仍**不支援**這款`一路（或稱單鍵）版本`的開關
 
+
+> **（2025/9/2更新）** 該廠商最近的產品塗鴉型號有再更新，這邊有再新增雙鍵的外部轉換器並測試可用
+
 哈迪自己做了外部轉換器並測試可用
 
 免費提供給各位做使用
@@ -342,15 +345,31 @@ Z2M在設定按鍵名稱時不支援中文
 
 > 另外HA核心太舊也可能導致Z2M附加元件無法升級
 
+### 外部轉換器版本說明
+
+目前提供兩個版本的外部轉換器：
+
+#### 單鍵版（ZMS-206US-1）
+- **適用**：一路（單鍵）開關
+- **支援製造商**：`_TZEXXX_sa2ueffe`
+- **功能**：基本開關控制、指示燈設定、按鍵名稱設定
+
+#### 雙鍵版（ZMS-206US-2）
+- **適用**：雙路（雙鍵）開關
+- **支援製造商**：`_TZEXXX_3ctwoaip`、`_TZEXXX_dxvuzmuj`、`_TZEXXX_dmckrsxg`
+- **功能**：雙路開關控制、個別按鍵名稱設定、個別繼電器狀態、個別倒計時、循環排程
+
 ### 上傳圖片（非必要）
 
-上傳一路版本專用圖片
+依照需求上傳開關專用圖片
 
 > 此步驟非必要，可以跳過到[下個步驟](#上傳外部轉換器)
 
 以任何方式保存以下圖片
 
 ![單路開關](external_converters/homeassistant/www/community/images/ZMS-206US-1.jpg)
+
+![單路開關](external_converters/homeassistant/www/community/images/ZMS-206US-2.jpg)
 
 透過任何方式將圖片上傳至HA主機中
 
@@ -360,6 +379,7 @@ Z2M在設定按鍵名稱時不支援中文
 
 ```
 (你的HA根目錄)/www/community/images/ZMS-206US-1.jpg
+(你的HA根目錄)/www/community/images/ZMS-206US-2.jpg
 ```
 
 如果你的HA環境沒有架設FTP伺服器，也無法使用ssh連線
@@ -371,6 +391,8 @@ Z2M在設定按鍵名稱時不支援中文
 ### 上傳外部轉換器
 
 > Z2M升級到v2.x.x才能使用以下外部轉換器方法
+
+#### 單鍵版外部轉換器
 
 下載或複製以下程式碼
 
@@ -393,6 +415,29 @@ Z2M在設定按鍵名稱時不支援中文
 
 ```
 (你的Z2M根目錄)/external_converters/ZMS-206US-1.js
+```
+
+#### 雙鍵版外部轉換器
+
+下載或複製以下程式碼
+
+> 檔案連結、純文字連結，擇一使用
+
+- 檔案連結：[ZMS-206US-2.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-2.js)
+- 純文字連結：[ZMS-206US-2.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-2.js)
+
+建立以下路徑檔案並貼上程式碼
+
+如果你是使用HA附加元件安裝Z2M，遵循以下路徑
+
+```bash
+(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-2.js
+```
+
+如果是透過其他方法安裝Z2M，遵循以下路徑
+
+```bash
+(你的Z2M根目錄)/external_converters/ZMS-206US-2.js
 ```
 
 > 注意！資料夾及程式碼檔案名稱必須一模一樣，小心錯別字！
@@ -437,6 +482,7 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 
 ```
 [2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-1.js'.
+[2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-2.js'.
 ```
 
 **程式碼格式有誤**會出現類似以下訊息，請確認你的程式碼內容排版
@@ -451,6 +497,8 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 
 ### 配對資訊
 
+#### 單鍵版配對資訊
+
 將你的一路開關配對至Z2M後
 
 正常情況下你會看到如下資訊
@@ -463,29 +511,115 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 
 ![](attachments/zemi_zms206/1way_ctl.png)
 
-如果你發現裝置仍然是未支援的狀態
+#### 雙鍵版配對資訊
 
-查看一下`Zigbee製造商`名稱是否為`_TZE204_sa2ueffe`或`_TZE284_sa2ueffe`
+將你的雙鍵開關配對至Z2M後
 
-如果不是，請自行修改外部轉換器`ZMS-206US-1.js`內容如下
+正常情況下你會看到如下資訊
 
-```
+![](attachments/zemi_zms206/z2m_1.jpg)
+
+公開控制項目如下
+
+![](attachments/zemi_zms206/z2m_2.jpg)
+
+### 製造商支援
+
+#### 單鍵版製造商支援
+
+單鍵版外部轉換器支援以下製造商：
+
+- `_TZE204_sa2ueffe`
+- `_TZE284_sa2ueffe`
+
+#### 雙鍵版製造商支援
+
+雙鍵版外部轉換器支援以下製造商：
+
+- `_TZE284_3ctwoaip`
+- `_TZE204_3ctwoaip`
+- `_TZE284_dxvuzmuj`
+- `_TZE204_dxvuzmuj`
+- `_TZE284_dmckrsxg`
+- `_TZE204_dmckrsxg`
+
+### 製造商修改說明
+
+如果你的開關製造商不在上述列表中
+
+請自行修改對應的外部轉換器檔案內容
+
+#### 單鍵版修改範例
+
+```javascript
 [60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE204_sa2ueffe", "_TZE284_sa2ueffe"]),
 ```
 
 在最後列表中加入你的製造商名稱（假設是`_ABC204_aabbccdd`）
 
-```
+```javascript
 [60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE204_sa2ueffe", "_TZE284_sa2ueffe", "_ABC204_aabbccdd"]),
+```
+
+#### 雙鍵版修改範例
+
+```javascript
+[60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE284_3ctwoaip", "_TZE204_3ctwoaip", "_TZE284_dxvuzmuj", "_TZE204_dxvuzmuj", "_TZE284_dmckrsxg", "_TZE204_dmckrsxg"]),
+```
+
+在最後列表中加入你的製造商名稱（假設是`_ABC204_aabbccdd`）
+
+```javascript
+[60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE284_3ctwoaip", "_TZE204_3ctwoaip", "_TZE284_dxvuzmuj", "_TZE204_dxvuzmuj", "_TZE284_dmckrsxg", "_TZE204_dmckrsxg", "_ABC204_aabbccdd"]),
 ```
 
 > 注意！程式碼的排版格式很重要，請嚴格按照規則
 
 修改好之後再重新啟動Z2M並查看裝置是否支援
 
+### 進階功能說明
+
+#### 單鍵版功能
+- **基本開關控制**：開關狀態控制
+- **指示燈設定**：顏色及亮度調整
+- **按鍵名稱設定**：支援中文最多4字、英文最多10字
+
+#### 雙鍵版功能
+- **雙路開關控制**：可獨立控制兩個繼電器
+- **個別按鍵名稱設定**：每個按鍵可設定不同的顯示文字
+- **個別繼電器狀態**：可設定每個繼電器的通電狀態（通電/斷電/重啟記憶）
+- **個別倒計時功能**：每個按鍵可設定獨立的倒計時（0-43200秒）
+- **循環排程功能**：支援循環排程設定
+
+### 使用建議
+
+#### 單鍵版使用建議
+1. **按鍵命名**：建議使用簡潔明瞭的名稱
+2. **指示燈顏色**：關閉顏色建議為白色，開啟顏色建議為藍色或綠色
+3. **指示燈亮度**：建議設定5%，看的到位置即可
+
+#### 雙鍵版使用建議
+1. **按鍵命名**：建議使用簡潔明瞭的名稱，如「客廳」、「臥室」
+2. **繼電器狀態**：一般建議設定為「power_on」，除非有特殊需求
+3. **倒計時**：適合用於浴室、廚房等需要定時關閉的場景
+4. **指示燈顏色**：可根據不同按鍵功能設定不同顏色
+
+### 故障排除
+
+如果外部轉換器無法正常工作：
+
+1. **檢查日誌**：確認Z2M日誌中是否有載入外部轉換器的訊息
+2. **檢查製造商**：確認你的開關製造商是否在支援列表中
+3. **重新配對**：嘗試重新配對開關
+4. **重啟Z2M**：重新啟動Zigbee2mqtt服務
+
 ### 恭喜完成外部轉換器！
 
 你成功完成了超困難的Z2M自訂外部轉換器
+
+現在擁有了完整的單鍵版和雙鍵版外部轉換器
+
+可以根據需求選擇合適的版本使用
 
 趕快去跟親朋好友炫耀一下
 
