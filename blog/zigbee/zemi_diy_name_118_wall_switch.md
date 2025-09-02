@@ -320,8 +320,7 @@ Z2M在設定按鍵名稱時不支援中文
 
 截至目前`Z2M v2.3.0`仍**不支援**這款`一路（或稱單鍵）版本`的開關
 
-
-> **（2025/9/2更新）** 該廠商最近的產品塗鴉型號有再更新，這邊有再新增雙鍵的外部轉換器並測試可用
+> **（2025/9/2更新）** 新增單鍵至四鍵版外部轉換器，完整支援所有版本
 
 哈迪自己做了外部轉換器並測試可用
 
@@ -347,29 +346,25 @@ Z2M在設定按鍵名稱時不支援中文
 
 ### 外部轉換器版本說明
 
-目前提供兩個版本的外部轉換器：
+目前提供四個版本的外部轉換器，請根據您的開關版本選擇對應的外部轉換器：
 
-#### 單鍵版（ZMS-206US-1）
-- **適用**：一路（單鍵）開關
-- **支援製造商**：`_TZEXXX_sa2ueffe`
-- **功能**：基本開關控制、指示燈設定、按鍵名稱設定
-
-#### 雙鍵版（ZMS-206US-2）
-- **適用**：雙路（雙鍵）開關
-- **支援製造商**：`_TZEXXX_3ctwoaip`、`_TZEXXX_dxvuzmuj`、`_TZEXXX_dmckrsxg`
-- **功能**：雙路開關控制、個別按鍵名稱設定、個別繼電器狀態、個別倒計時、循環排程
+- 單鍵版（ZMS-206US-1）
+- 雙鍵版（ZMS-206US-2）
+- 三鍵版（ZMS-206US-3）
+- 四鍵版（ZMS-206US-4）
 
 ### 上傳圖片（非必要）
 
-依照需求上傳開關專用圖片
+> 請根據您的開關版本下載對應的圖片檔案
 
-> 此步驟非必要，可以跳過到[下個步驟](#上傳外部轉換器)
+此步驟非必要，可以跳過到[下個步驟](#上傳外部轉換器)
 
-以任何方式保存以下圖片
+以任何方式保存以下圖片（請選擇對應您開關版本的圖片）：
 
-![單路開關](external_converters/homeassistant/www/community/images/ZMS-206US-1.jpg)
-
-![單路開關](external_converters/homeassistant/www/community/images/ZMS-206US-2.jpg)
+- **單鍵版**：[ZMS-206US-1.jpg](external_converters/homeassistant/www/community/images/ZMS-206US-1.jpg)
+- **雙鍵版**：[ZMS-206US-2.jpg](external_converters/homeassistant/www/community/images/ZMS-206US-2.jpg)
+- **三鍵版**：[ZMS-206US-3.jpg](external_converters/homeassistant/www/community/images/ZMS-206US-3.jpg)
+- **四鍵版**：[ZMS-206US-4.jpg](external_converters/homeassistant/www/community/images/ZMS-206US-4.jpg)
 
 透過任何方式將圖片上傳至HA主機中
 
@@ -377,9 +372,11 @@ Z2M在設定按鍵名稱時不支援中文
 
 > 提示：`www`資料夾會跟`custom_components`在同一層目錄下
 
-```
-(你的HA根目錄)/www/community/images/ZMS-206US-1.jpg
-(你的HA根目錄)/www/community/images/ZMS-206US-2.jpg
+```bash
+(你的HA根目錄)/www/community/images/ZMS-206US-1.jpg  # 單鍵版
+(你的HA根目錄)/www/community/images/ZMS-206US-2.jpg  # 雙鍵版
+(你的HA根目錄)/www/community/images/ZMS-206US-3.jpg  # 三鍵版
+(你的HA根目錄)/www/community/images/ZMS-206US-4.jpg  # 四鍵版
 ```
 
 如果你的HA環境沒有架設FTP伺服器，也無法使用ssh連線
@@ -392,55 +389,61 @@ Z2M在設定按鍵名稱時不支援中文
 
 > Z2M升級到v2.x.x才能使用以下外部轉換器方法
 
-#### 單鍵版外部轉換器
+請根據您的開關版本選擇對應的外部轉換器：
 
-下載或複製以下程式碼
+#### 選擇腳本
 
-> 檔案連結、純文字連結，擇一使用
+**單鍵版（ZMS-206US-1）**
 
-- 檔案連結：[ZMS-206US-1.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
+- 檔案連結：[ZMS-206US-1.js](external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
 - 純文字連結：[ZMS-206US-1.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-1.js)
 
-建立以下路徑檔案並貼上程式碼
+**雙鍵版（ZMS-206US-2）**
 
-如果你是使用HA附加元件安裝Z2M，遵循以下路徑
+- 檔案連結：[ZMS-206US-2.js](external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-2.js)
+- 純文字連結：[ZMS-206US-2.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-2.js)
+
+**三鍵版（ZMS-206US-3）**
+
+- 檔案連結：[ZMS-206US-3.js](external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-3.js)
+- 純文字連結：[ZMS-206US-3.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-3.js)
+
+**四鍵版（ZMS-206US-4）**
+
+- 檔案連結：[ZMS-206US-4.js](external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-4.js)
+- 純文字連結：[ZMS-206US-4.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-4.js)
+
+#### 安裝步驟
+
+1. **下載腳本**：點擊上方對應您開關版本的檔案連結或純文字連結
+2. **建立檔案**：在您的HA主機中建立對應的檔案路徑
+3. **貼上程式碼**：將下載的程式碼完整貼上到對應檔案中
+
+#### 檔案路徑
+
+**如果您使用HA附加元件安裝Z2M：**
 
 > 提示：`zigbee2mqtt`資料夾會跟`custom_components`在同一層目錄下
 
-```
-(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-1.js
-```
-
-如果是透過其他方法安裝Z2M，遵循以下路徑
-
-```
-(你的Z2M根目錄)/external_converters/ZMS-206US-1.js
+```bash
+(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-1.js  # 單鍵版
+(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-2.js  # 雙鍵版
+(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-3.js  # 三鍵版
+(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-4.js  # 四鍵版
 ```
 
-#### 雙鍵版外部轉換器
-
-下載或複製以下程式碼
-
-> 檔案連結、純文字連結，擇一使用
-
-- 檔案連結：[ZMS-206US-2.js](https://github.com/hardycheng-github/smarthome-blog/blob/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-2.js)
-- 純文字連結：[ZMS-206US-2.js](https://raw.githubusercontent.com/hardycheng-github/smarthome-blog/refs/heads/main/blog/zigbee/external_converters/homeassistant/zigbee2mqtt/external_converters/ZMS-206US-2.js)
-
-建立以下路徑檔案並貼上程式碼
-
-如果你是使用HA附加元件安裝Z2M，遵循以下路徑
+**如果您透過其他方法安裝Z2M：**
 
 ```bash
-(你的HA根目錄)/zigbee2mqtt/external_converters/ZMS-206US-2.js
-```
-
-如果是透過其他方法安裝Z2M，遵循以下路徑
-
-```bash
-(你的Z2M根目錄)/external_converters/ZMS-206US-2.js
+(你的Z2M根目錄)/external_converters/ZMS-206US-1.js  # 單鍵版
+(你的Z2M根目錄)/external_converters/ZMS-206US-2.js  # 雙鍵版
+(你的Z2M根目錄)/external_converters/ZMS-206US-3.js  # 三鍵版
+(你的Z2M根目錄)/external_converters/ZMS-206US-4.js  # 四鍵版
 ```
 
 > 注意！資料夾及程式碼檔案名稱必須一模一樣，小心錯別字！
+
+### 圖片路徑設定
 
 圖片路徑上傳至自定義位置的，請自行修改程式碼中的圖片路徑
 
@@ -483,6 +486,8 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 ```
 [2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-1.js'.
 [2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-2.js'.
+[2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-3.js'.
+[2025-06-09 16:38:25] info: 	z2m: Loaded external converter 'ZMS-206US-4.js'.
 ```
 
 **程式碼格式有誤**會出現類似以下訊息，請確認你的程式碼內容排版
@@ -497,9 +502,7 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 
 ### 配對資訊
 
-#### 單鍵版配對資訊
-
-將你的一路開關配對至Z2M後
+將原本不支援的開關配對至Z2M後
 
 正常情況下你會看到如下資訊
 
@@ -511,66 +514,31 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 
 ![](attachments/zemi_zms206/1way_ctl.png)
 
-#### 雙鍵版配對資訊
-
-將你的雙鍵開關配對至Z2M後
-
-正常情況下你會看到如下資訊
-
-![](attachments/zemi_zms206/z2m_1.jpg)
-
-公開控制項目如下
-
-![](attachments/zemi_zms206/z2m_2.jpg)
-
-### 製造商支援
-
-#### 單鍵版製造商支援
-
-單鍵版外部轉換器支援以下製造商：
-
-- `_TZE204_sa2ueffe`
-- `_TZE284_sa2ueffe`
-
-#### 雙鍵版製造商支援
-
-雙鍵版外部轉換器支援以下製造商：
-
-- `_TZE284_3ctwoaip`
-- `_TZE204_3ctwoaip`
-- `_TZE284_dxvuzmuj`
-- `_TZE204_dxvuzmuj`
-- `_TZE284_dmckrsxg`
-- `_TZE204_dmckrsxg`
-
 ### 製造商修改說明
 
-如果你的開關製造商不在上述列表中
+> **重要提醒**：如果您的開關製造商不在上述列表中，請自行查看並新增fingerprint
 
-請自行修改對應的外部轉換器檔案內容
+#### 如何查看製造商資訊
 
-#### 單鍵版修改範例
+1. 將開關配對至Z2M
+2. 在Z2M裝置列表中查看該裝置
+3. 點擊裝置進入詳細資訊
+4. 查看`Zigbee製造商`欄位
+
+#### 修改範例
+
+如果您的開關製造商不在支援列表中，請自行修改對應的外部轉換器檔案內容
+
+##### 單鍵版修改範例
 
 ```javascript
 [60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE204_sa2ueffe", "_TZE284_sa2ueffe"]),
 ```
 
-在最後列表中加入你的製造商名稱（假設是`_ABC204_aabbccdd`）
+在最後列表中加入您的製造商名稱（假設是`_ABC204_aabbccdd`）
 
 ```javascript
 [60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE204_sa2ueffe", "_TZE284_sa2ueffe", "_ABC204_aabbccdd"]),
-```
-
-#### 雙鍵版修改範例
-
-```javascript
-[60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE284_3ctwoaip", "_TZE204_3ctwoaip", "_TZE284_dxvuzmuj", "_TZE204_dxvuzmuj", "_TZE284_dmckrsxg", "_TZE204_dmckrsxg"]),
-```
-
-在最後列表中加入你的製造商名稱（假設是`_ABC204_aabbccdd`）
-
-```javascript
-[60行] fingerprint: tuya.fingerprint("TS0601", ["_TZE284_3ctwoaip", "_TZE204_3ctwoaip", "_TZE284_dxvuzmuj", "_TZE204_dxvuzmuj", "_TZE284_dmckrsxg", "_TZE204_dmckrsxg", "_ABC204_aabbccdd"]),
 ```
 
 > 注意！程式碼的排版格式很重要，請嚴格按照規則
@@ -579,45 +547,35 @@ icon: '/hacsfiles/images/ZMS-206US-1.jpg?99',
 
 ### 進階功能說明
 
-#### 單鍵版功能
+#### 支援功能
+
 - **基本開關控制**：開關狀態控制
 - **指示燈設定**：顏色及亮度調整
 - **按鍵名稱設定**：支援中文最多4字、英文最多10字
 
-#### 雙鍵版功能
-- **雙路開關控制**：可獨立控制兩個繼電器
-- **個別按鍵名稱設定**：每個按鍵可設定不同的顯示文字
-- **個別繼電器狀態**：可設定每個繼電器的通電狀態（通電/斷電/重啟記憶）
-- **個別倒計時功能**：每個按鍵可設定獨立的倒計時（0-43200秒）
-- **循環排程功能**：支援循環排程設定
-
 ### 使用建議
 
 #### 單鍵版使用建議
+
 1. **按鍵命名**：建議使用簡潔明瞭的名稱
 2. **指示燈顏色**：關閉顏色建議為白色，開啟顏色建議為藍色或綠色
 3. **指示燈亮度**：建議設定5%，看的到位置即可
 
-#### 雙鍵版使用建議
-1. **按鍵命名**：建議使用簡潔明瞭的名稱，如「客廳」、「臥室」
-2. **繼電器狀態**：一般建議設定為「power_on」，除非有特殊需求
-3. **倒計時**：適合用於浴室、廚房等需要定時關閉的場景
-4. **指示燈顏色**：可根據不同按鍵功能設定不同顏色
 
 ### 故障排除
 
 如果外部轉換器無法正常工作：
 
 1. **檢查日誌**：確認Z2M日誌中是否有載入外部轉換器的訊息
-2. **檢查製造商**：確認你的開關製造商是否在支援列表中
+2. **檢查製造商**：確認您的開關製造商是否在支援列表中
 3. **重新配對**：嘗試重新配對開關
 4. **重啟Z2M**：重新啟動Zigbee2mqtt服務
 
 ### 恭喜完成外部轉換器！
 
-你成功完成了超困難的Z2M自訂外部轉換器
+您成功完成了超困難的Z2M自訂外部轉換器
 
-現在擁有了完整的單鍵版和雙鍵版外部轉換器
+現在擁有了完整的單鍵版、雙鍵版、三鍵版和四鍵版外部轉換器
 
 可以根據需求選擇合適的版本使用
 

@@ -56,11 +56,11 @@ const valueConverterLocal = {
 };
 
 const definition = {
-    icon: '/hacsfiles/images/ZMS-206US-2.jpg?',
-	fingerprint: tuya.fingerprint("TS0601", ["_TZE284_3ctwoaip", "_TZE204_3ctwoaip", "_TZE284_dxvuzmuj", "_TZE204_dxvuzmuj", "_TZE284_dmckrsxg", "_TZE204_dmckrsxg"]),
-	model: "ZMS-206US-2",
+    icon: '/hacsfiles/images/ZMS-206US-4.jpg?',
+	fingerprint: tuya.fingerprint("TS0601", ["_TZE204_wwaeqnrf", "_TZE284_wwaeqnrf", "_TZE204_y4jqpry8", "_TZE284_y4jqpry8"]),
+	model: "ZMS-206US-4",
 	vendor: "Hardy3C",
-    description: "[哈迪自製]智美DIY名稱開關-2路",
+    description: "[哈迪自製]智美DIY名稱開關-4路",
 	extend: [tuya.modernExtend.tuyaBase({dp: true, timeStart: "2000"})],
 	fromZigbee: [tuya.fz.datapoints],
 	toZigbee: [tuya.tz.datapoints],
@@ -71,6 +71,8 @@ const definition = {
 		e.switch(),
 		e.switch().withEndpoint("l1"),
 		e.switch().withEndpoint("l2"),
+		e.switch().withEndpoint("l3"),
+		e.switch().withEndpoint("l4"),
 		e
 			.numeric("backlight_brightness", ea.STATE_SET)
 			.withDescription("Brightness of the light")
@@ -91,6 +93,8 @@ const definition = {
 			.withDescription("Switch lightcolor while delayed"),
 		e.text("name", ea.STATE_SET).withEndpoint("l1").withDescription("Name for Switch 1"),
 		e.text("name", ea.STATE_SET).withEndpoint("l2").withDescription("Name for Switch 2"),
+		e.text("name", ea.STATE_SET).withEndpoint("l3").withDescription("Name for Switch 3"),
+		e.text("name", ea.STATE_SET).withEndpoint("l4").withDescription("Name for Switch 4"),
 		e
 			.enum("relay_status", ea.STATE_SET, ["power_on", "power_off", "restart_memory"])
 			.withEndpoint("l1")
@@ -99,6 +103,14 @@ const definition = {
 			.enum("relay_status", ea.STATE_SET, ["power_on", "power_off", "restart_memory"])
 			.withEndpoint("l2")
 			.withDescription("Relay Status for Switch 2"),
+		e
+			.enum("relay_status", ea.STATE_SET, ["power_on", "power_off", "restart_memory"])
+			.withEndpoint("l3")
+			.withDescription("Relay Status for Switch 3"),
+		e
+			.enum("relay_status", ea.STATE_SET, ["power_on", "power_off", "restart_memory"])
+			.withEndpoint("l4")
+			.withDescription("Relay Status for Switch 4"),
 		e
 			.numeric("countdown", ea.STATE_SET)
 			.withEndpoint("l1")
@@ -115,17 +127,37 @@ const definition = {
 			.withValueMin(0)
 			.withValueMax(43200)
 			.withValueStep(1),
+		e
+			.numeric("countdown", ea.STATE_SET)
+			.withEndpoint("l3")
+			.withDescription("Countdown for Switch 3")
+			.withUnit("s")
+			.withValueMin(0)
+			.withValueMax(43200)
+			.withValueStep(1),
+		e
+			.numeric("countdown", ea.STATE_SET)
+			.withEndpoint("l4")
+			.withDescription("Countdown for Switch 4")
+			.withUnit("s")
+			.withValueMin(0)
+			.withValueMax(43200)
+			.withValueStep(1),
 	],
 	endpoint: (device) => {
-		return {l1: 1, l2: 1};
+		return {l1: 1, l2: 1, l3: 1, l4: 1};
 	},
 	meta: {
 		multiEndpoint: true,
 		tuyaDatapoints: [
 			[1, "state_l1", tuya.valueConverter.onOff, {skip: tuya.skip.stateOnAndBrightnessPresent}],
 			[2, "state_l2", tuya.valueConverter.onOff, {skip: tuya.skip.stateOnAndBrightnessPresent}],
+			[3, "state_l3", tuya.valueConverter.onOff, {skip: tuya.skip.stateOnAndBrightnessPresent}],
+			[4, "state_l4", tuya.valueConverter.onOff, {skip: tuya.skip.stateOnAndBrightnessPresent}],
 			[7, "countdown_l1", tuya.valueConverter.raw],
 			[8, "countdown_l2", tuya.valueConverter.raw],
+			[9, "countdown_l3", tuya.valueConverter.raw],
+			[10, "countdown_l4", tuya.valueConverter.raw],
 			[13, "state", tuya.valueConverter.onOff, {skip: tuya.skip.stateOnAndBrightnessPresent}],
 			[14, "relay_status", tuya.valueConverter.raw],
 			[15, "indicator_status", valueConverterLocal.indiciatorStatus],
@@ -134,12 +166,16 @@ const definition = {
 			[24, "test_bit", tuya.valueConverter.raw],
 			[29, "relay_status_l1", valueConverterLocal.relayStatus],
 			[30, "relay_status_l2", valueConverterLocal.relayStatus],
+			[31, "relay_status_l3", valueConverterLocal.relayStatus],
+			[32, "relay_status_l4", valueConverterLocal.relayStatus],
 			[101, "child_lock", tuya.valueConverter.lockUnlock],
 			[102, "backlight_brightness", tuya.valueConverter.raw],
 			[103, "switch_color_off", valueConverterLocal.switchColor],
 			[104, "switch_color_on", valueConverterLocal.switchColor],
 			[105, "name_l1", valueConverterLocal.name],
 			[106, "name_l2", valueConverterLocal.name],
+			[107, "name_l3", valueConverterLocal.name],
+			[108, "name_l4", valueConverterLocal.name],
 			[209, "cycle_schedule", valueConverterLocal.cycleSchedule],
 		],
 	},

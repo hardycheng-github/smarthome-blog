@@ -61,6 +61,7 @@ const definition = {
     model: "ZMS-206US-1",
     vendor: "Hardy3C",
     description: "[哈迪自製]智美DIY名稱開關-1路",
+    extend: [tuya.modernExtend.tuyaBase({dp: true, timeStart: "2000"})],
     fromZigbee: [tuya.fz.datapoints],
     toZigbee: [tuya.tz.datapoints],
     onEvent: tuya.onEventSetTime,
