@@ -8,7 +8,7 @@
 
 對於新世代的**Thread協議**，要額外準備一個昂貴的適配器是令人卻步的主因
 
-對此，幾年前曾興起了**多協議支援（Multi-Protocol）**的熱潮
+對此，幾年前曾興起了**多協議支援**（Multi-Protocol）的熱潮
 
 適用在**Silabs EFR32MG**系列晶片，包含鼎鼎大名的**SONOFF ZBDongle-E**
 
