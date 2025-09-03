@@ -36,6 +36,7 @@
 
 - [閒聊系列：外網斷線時對於HA的影響](blog/other/ha_without_network.md)
 - [閒聊系列：小米Token提取失敗的解決方案](blog/other/mi_token_work_around.md)
+- [閒聊系列：關於Zigbee與Thread多協議韌體的可靠性](blog/other/sonoff_zbdongle_e_multipan.md)
 
 ## 商城
 
