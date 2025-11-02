@@ -45,10 +45,8 @@
 ![711](icons/store711.jpg)
 
 - [電子名片](https://linktr.ee/hardy3c)
-
 - [哈迪商城 - 現貨商品](https://myship.7-11.com.tw/general/detail/GM2406268597737)
-
 - [哈迪商城 - 預購商品](https://myship.7-11.com.tw/general/detail/GM2411287898818)
-- 
 - [哈迪商城 - 雜貨商品](https://myship.7-11.com.tw/general/detail/GM2508072813430)
+
 
