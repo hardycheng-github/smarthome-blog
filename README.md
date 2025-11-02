@@ -38,10 +38,12 @@
 - [閒聊系列：外網斷線時對於HA的影響](blog/other/ha_without_network.md)
 - [閒聊系列：小米Token提取失敗的解決方案](blog/other/mi_token_work_around.md)
 - [閒聊系列：關於Zigbee與Thread多協議韌體的可靠性](blog/other/sonoff_zbdongle_e_multipan.md)
+- [閒聊系列：ZBMicro與ZBDongle-E中繼能力比較](blog/other/zigbee-repeater-zbmicro-zbdonglee.md)
 
 ## 商城
 
 ![711](icons/store711.jpg)
 
 - [哈迪商城 - 現貨商品](https://myship.7-11.com.tw/general/detail/GM2406268597737)
+
 - [哈迪商城 - 預購商品](https://myship.7-11.com.tw/general/detail/GM2411287898818)
