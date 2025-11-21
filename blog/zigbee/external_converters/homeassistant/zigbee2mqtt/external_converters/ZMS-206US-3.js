@@ -57,7 +57,7 @@ const valueConverterLocal = {
 
 const definition = {
     icon: '/hacsfiles/images/ZMS-206US-3.jpg?',
-	fingerprint: tuya.fingerprint("TS0601", ["_TZE204_k7v0eqke", "_TZE284_k7v0eqke", "_TZE204_iyki9kjp", "_TZE284_iyki9kjp"]),
+	fingerprint: tuya.fingerprint("TS0601", ["_TZE204_k7v0eqke", "_TZE284_k7v0eqke", "_TZE204_iyki9kjp", "_TZE284_iyki9kjp", "_TZE204_e4pf6l87", "_TZE284_e4pf6l87"]),
 	model: "ZMS-206US-3",
 	vendor: "Hardy3C",
     description: "[哈迪自製]智美DIY名稱開關-3路",
