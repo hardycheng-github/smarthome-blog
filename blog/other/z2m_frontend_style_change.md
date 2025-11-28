@@ -22,6 +22,20 @@ Zigbee2mqtt `2.6.2` 起預設套用 `Windfront` 新版主題，配色與排版�
 2. 設定完成後務必按下畫面下方的 `Submit` 按鈕，讓變更寫入設定檔，再重新啟動 Zigbee2MQTT。  
    ![](attachments/z2m_frontend_style_4.jpg)
 
+## 個人小廣告
+
+有在幫忙做淘寶代購智能產品
+
+會配合淘寶的各大購物節調整預售價格
+
+> 618、雙11、以及其他不定時出現的購物節
+
+優惠價請參考預購商城，現貨通常不會調降
+
+商城電子名片（預購/現貨/雜貨）
+
+https://linktr.ee/hardy3c
+
 #Zigbee2mqtt #HomeAssistant
 
 [🧾去選單](../../README.md)
