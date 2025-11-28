@@ -39,6 +39,7 @@
 - [閒聊系列：小米Token提取失敗的解決方案](blog/other/mi_token_work_around.md)
 - [閒聊系列：關於Zigbee與Thread多協議韌體的可靠性](blog/other/sonoff_zbdongle_e_multipan.md)
 - [閒聊系列：ZBMicro與ZBDongle-E中繼能力比較](blog/other/zigbee-repeater-zbmicro-zbdonglee.md)
+- [教學系列：如何換回Zigbee2mqtt舊主題](blog/other/z2m_frontend_style_change.md)
 
 ## 商城
 
