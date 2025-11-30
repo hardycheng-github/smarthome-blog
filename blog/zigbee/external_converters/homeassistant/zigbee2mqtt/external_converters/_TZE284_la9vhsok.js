@@ -19,14 +19,10 @@ const invertedTuyaCoverControl = {
 
 const definition = {
     zigbeeModel: [],
-    fingerprint: [
-        tuya.fingerprint('TS0601', [
-            '_TZE284_la9vhsok',
-        ]),
-    ],
+    fingerprint: [{ modelID: "TS0601", manufacturerName: "_TZE284_la9vhsok", priority: 1 }],
     model: 'TS0601_cover_1',
-    vendor: 'Tuya',
-    description: 'Curtain motor with corrected percentage setting',
+    vendor: "Hardy3C",
+    description: "[哈迪自製]TS0601_cover",
     whiteLabel: [],
     fromZigbee: [legacy.fromZigbee.tuya_cover, fz.ignore_basic_report],
     toZigbee: [invertedTuyaCoverControl, legacy.toZigbee.tuya_cover_options],
