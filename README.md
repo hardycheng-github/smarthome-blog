@@ -31,6 +31,18 @@
 
 - 暫無
 
+## WiFi系列
+
+![wifi](icons/wifi.png)
+
+### 👍推薦列表
+
+- [居家WiFi系列：Reolink E1 Pro可移動AI攝影機](blog/wifi/reolink_e1_pro.md)
+
+### 👎不推列表
+
+- 暫無
+
 ## 閒聊雜談系列
 
 ![talk](icons/talk.png)
