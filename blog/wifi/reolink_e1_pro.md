@@ -215,11 +215,11 @@ E1 Pro 採用 QR Code 快速配對設定
 
 請依照以下教學影片操作
 
-![](attachments/reolink_e1_pro/教學_配對.mp4)
+https://github.com/user-attachments/assets/b5367fce-fbaa-4b5d-bd8a-8c00c02855a2
 
 接著需要進入裝置確認一下串流協議是否有開通
 
-![](attachments/reolink_e1_pro/教學_協議設定.mp4)
+https://github.com/user-attachments/assets/e251e160-f80f-4253-b3bc-85ddc4f3843f
 
 ### 接入 Home Assistant
 
