@@ -1,60 +1,54 @@
 [🧾去選單](../../README.md)
 
-> 發布於: 2025/12/30
+> 發布於: 2025/12/31
 
 # 居家WiFi系列：Reolink E1 Pro 5MP 可移動AI攝影機
 
-![](attachments/reolink_e1_pro/1.jpg)
+![](attachments/reolink_e1_pro/product_view.jpg)
 
 ## 快速總結
 
 Reolink E1 Pro 可移動AI攝影機
 
-- 5MP 超高清室內攝影機
-- 攝影機可以完全本地化
-- PTZ支援 355° 水平與 50° 垂直旋轉
-- AI 智能偵測（人類、動作、寵物、嬰兒哭聲）與自動追蹤功能。
+- 提供 5MP 解析度，主串流可達 20fps。
+- 支援 355° 水平與 50° 垂直旋轉，實現（幾乎）無死角監控。
+- 支援物件自動追蹤功能（僅水平方向）
+- 可設定多個預設位置，具備斷電記憶功能。
+- 內建 AI 演算法識別人形、動作、寵物和哭聲。
+- 內建麥克風與揚聲器，支援即時雙向語音通話。
+- 配備紅外線 LED 燈，夜視環境自動切換IR。
+- 支援最高 512GB MicroSD 記憶卡（無附贈記憶卡）
+- 支援隱私模式功能，可透過軟體控制關閉攝影機。
 
 **接入 Home Assistant：**
 
-可透過 Reolink 官方整合或 ONVIF 整合接入 Home Assistant
+可透過 Reolink 官方整合接入 Home Assistant
 
-支援影像串流、移動偵測、物件偵測、PTZ控制等功能
-
-建議使用 Reolink 白金級官方整合，或透過 ONVIF 協議作為備選方案
+支援影像串流、AI偵測事件、PTZ控制等功能
 
 接入前需在 Reolink App 先做設定配對（WiFi連接、攝影機登入帳密設定）
 
 支援 `2.4GHz/5GHz雙頻Wi-Fi` 或 `RJ45有線網路`
 
+> 無線/有線網路共存時，有線網路優先
+
 建議使用 5GHz Wi-Fi 或 Ethernet 以獲得穩定的串流品質
 
 ## 👍 優點
-
-### 功能與規格
-
-- 提供 5MP 解析度，主串流可達 20fps。
-- 支援 355° 水平與 50° 垂直旋轉，實現（幾乎）無死角監控。
-- 支援自動追蹤功能（僅水平方向），並可設定多個預設位置，具備斷電記憶功能。
-- 內建 AI 演算法，能夠識別人形、動作、寵物和哭聲。
-- 內建麥克風與揚聲器，支援即時雙向語音通話，方便遠端溝通。
-- 配備紅外線 LED 燈，夜視環境自動切換IR，確保夜間監控效果。
-- 支援最高 512GB MicroSD 記憶卡
-- 支援隱私模式功能，可透過軟體控制關閉攝影機，保護個人隱私。
 
 ### 網路介面支援
 
 支援 Wi-Fi 2.4GHz 或 5GHz 頻段無線連接
 
-同時具備 RJ45 100Mbps 乙太網路連接埠
+同時具備 RJ45 乙太網路連接埠
 
 可選擇有線連接以獲得更穩定的網路品質
 
 ### Home Assistant 支援性
 
-HA當中的 `Reolink` 白金級整合
+HA當中的 `Reolink` 整合是最高等級白金級整合
 
-是少數被認證的 Home Assistant 官方合作夥伴
+品牌也是少數被認證的 Home Assistant 官方合作夥伴之一
 
 非常容易整合進入HA系統
 
@@ -98,9 +92,9 @@ Reolink攝影機可以在沒有外部網路的情況下運作
 
 目前不太滿意的部分就是 HA PTZ 控制
 
-透過 Reolink 整合的 PTZ 上下左右觸發後不會停止
+透過 Reolink 整合的 PTZ 上下左右觸發後會一直跑
 
-直到移動到底或主動按下`PTZ停止`按鈕才會停止移動
+直到移動到邊界或主動按下`PTZ停止`按鈕才會停止
 
 這點在使用上稍微不便
 
@@ -118,7 +112,15 @@ Reolink攝影機可以在沒有外部網路的情況下運作
 
 ## 🏪 商店
 
-[需要附圖：商店購買連結或截圖]
+[現貨商品](https://myship.7-11.com.tw/general/detail/GM2406268597737)
+
+有一個已拆封新品，以**原價八折**計，售完為止
+
+[預購商品](https://myship.7-11.com.tw/general/detail/GM2411287898818)
+
+基本上會透過美國或日本亞馬遜訂購
+
+每次最多代購兩個，預購名額有限售完不補
 
 > 自行採購的話推薦購買`日本`或`美國`版本
 
@@ -126,7 +128,7 @@ Reolink攝影機可以在沒有外部網路的情況下運作
 
 今天介紹 Reolink E1 Pro 可移動AI攝影機
 
-最近新家裝上了這款攝影機，整體體驗還算滿意
+最近新家裝上了這款攝影機，整體體驗非常滿意
 
 因為 Reolink 是 Home Assistant 的官方合作夥伴
 
@@ -160,141 +162,115 @@ https://www.home-assistant.io/integrations/reolink/#tested-models
 
 基本上移動中的物體準確度驚人的高
 
-> 靜止的人似乎是不會持續偵測到的
+> 但長時間靜止不動的人是不會持續偵測到的
 
-我沒辦法測試嬰兒哭聲跟動物
+另外我沒有測試嬰兒哭聲跟動物偵測，留給各位自行驗證
+
+### 產品開箱
+
+- 開箱內容物
+
+![](attachments/reolink_e1_pro/in_the_box.jpg)
+
+
+- 產品正面外觀
+
+![](attachments/reolink_e1_pro/overview_front.jpg)
+
+- 產品背面外觀
+
+![](attachments/reolink_e1_pro/overview_back.jpg)
+
+- 實拍圖
+
+![](attachments/reolink_e1_pro/real_view_front.jpg)
+
+![](attachments/reolink_e1_pro/real_view_back.jpg)
+
+- SD卡安裝位置
+
+> 需要控制鏡頭往上移動，才會露出卡槽
+
+![](attachments/reolink_e1_pro/sdcard_and_reset.jpg)
 
 ### 安裝與設定
 
-E1 Pro 採用 QR Code 快速安裝方式
+E1 Pro 採用 QR Code 快速配對設定
 
-透過 Reolink App 掃描攝影機底部的 QR Code
+透過 Reolink App 掃描攝影機背面的配對碼
 
 就能輕鬆完成安裝與設定
 
+請依照以下教學影片操作
 
-[需要附圖：Reolink App 掃描 QR Code 的畫面]
+![](attachments/reolink_e1_pro/教學_配對.mp4)
 
-Reolink APP 先下載好，並且不需要註冊帳號
+接著需要進入裝置確認一下串流協議是否有開通
 
-> 註冊也可以，能夠享有一些雲端功能，但資料就得外流了
-
-把攝影機上電，過段時間會開始PTZ校正
-
-之後會開始發生大聲的連接提示語音
-
-> 非常之大聲，請先趕快準備好你的APP
-
-找到攝影機背面的 QR Code 配對碼
-
-在 Reolink APP 中打開
-
-安裝時需要先設定 WiFi 連接
-
-以及攝影機的登入帳號密碼
-
-這些設定完成後才能接入 Home Assistant
+![](attachments/reolink_e1_pro/教學_協議設定.mp4)
 
 ### 接入 Home Assistant
 
-Reolink E1 Pro 可透過兩種方式接入 Home Assistant
+先確定攝影機是否已經加入 Reolink APP
 
-#### 方式一：Reolink 官方整合（推薦）
+接著使用 Reolink 白金級官方整合
 
-建議使用 Reolink 白金級官方整合
-
-功能最完整
-
-E1 Pro 為 5MP 版本
-
-理論上應支援 Reolink 官方整合
-
-若遇到相容性問題
-
-請確認攝影機韌體是否為最新版本
-
-[需要附圖：如何查看攝影機硬體版本的畫面]
-
-在 Home Assistant 中安裝 Reolink 整合：
+具備完整功能支援，也能連動AI偵測事件
 
 - 進入 Home Assistant 設定 → 裝置與服務
 - 點擊「新增整合」
 - 搜尋「Reolink」
 - 選擇 Reolink 整合並安裝
 
-[需要附圖：Home Assistant 中搜尋 Reolink 整合的畫面]
+![](attachments/reolink_e1_pro/ha_pair_1.jpg)
 
-設定攝影機連線時：
+此時就需要輸入攝影機帳號密碼
 
-- 輸入攝影機的 IP 位址
-- 輸入使用者名稱和密碼（預設為 admin/admin）
-- 確認連線設定
+> 帳號固定是admin；密碼是自定義的，如果忘記密碼請參考[常見問題](#忘記攝影機密碼)
 
-[需要附圖：Reolink 整合設定畫面，包含 IP、帳號密碼輸入欄位]
+![](attachments/reolink_e1_pro/ha_pair_2.jpg)
 
-整合完成後
+主機端的IP如果不知道怎麼在路由器確認
 
-您應該能在 Home Assistant 中看到攝影機的實體
+可以從 Reolink APP 查找設備IP
+
+Reolink APP → 進入指定攝影機設置 → 網絡信息 → IP地址
+
+![](attachments/reolink_e1_pro/ha_pair_0.jpg)
+
+整合完成後，應該能在 Reolink 整合中找到攝影機實體
 
 包括影像串流、移動偵測、物件偵測、PTZ 控制等功能
 
-[需要附圖：Home Assistant 中顯示的攝影機實體列表]
+![](attachments/reolink_e1_pro/ha_info.png)
 
-#### 方式二：ONVIF 整合（備選方案）
+### 加碼：將攝影機橋接至蘋果 HomeKit
 
-如果您的 E1 Pro 硬體版本不支援 Reolink 官方整合
+有多種方法可以讓 Reolink 攝影機加入 Homekit
 
-可以透過 ONVIF 協議接入
+1. 透過 Home Assistant 內建的 Homekit Bridge 功能
 
-首先在 Reolink App 中啟用 RTSP 和 ONVIF：
+最新的 HAOS 內建會為每個 Camera 實體都主動建立配對碼
 
-- 開啟 Reolink App
-- 進入攝影機設定 → 網路設定 → 進階設定
-- 啟用 RTSP 和 ONVIF 功能
-- 記錄 RTSP 連接埠（預設為 554）
+將攝影機接入HA後重新啟動HA，就會在通知看到配對碼如下
 
-[需要附圖：Reolink App 中啟用 RTSP/ONVIF 的設定畫面]
+![](attachments/reolink_e1_pro/homekit_pair.jpg)
 
-接著在 Home Assistant 中安裝 ONVIF 整合：
+2. 透過 Scrypted 橋接支援 HSV（蘋果安全錄影）
 
-- 進入 Home Assistant 設定 → 裝置與服務
-- 點擊「新增整合」
-- 搜尋「ONVIF」
-- 選擇 ONVIF 整合並安裝
+進階使用者可以安裝免費的 Scrypted 外掛
 
-[需要附圖：Home Assistant 中搜尋 ONVIF 整合的畫面]
+來將你的 Reolink 攝影機轉給 Homekit
 
-設定 ONVIF 連線時：
+它甚至能支援蘋果系統的「安全錄影」功能
 
-- 輸入攝影機的 IP 位址
-- 輸入使用者名稱和密碼
-- ONVIF 整合會自動偵測攝影機設定
+給有訂閱 iCloud 方案的用戶的可選功能
 
-[需要附圖：ONVIF 整合設定畫面]
+這屬於高階玩法，如果你有興趣，歡迎自行研究
 
-整合完成後
+https://github.com/koush/scrypted/wiki/Installation:-Home-Assistant-OS
 
-確認影像串流和移動偵測功能正常運作
-
-[需要附圖：Home Assistant 中顯示的攝影機串流畫面]
-
-### 使用心得分享
-
-目前使用下來
-
-影像串流品質穩定
-
-AI 偵測功能也還算準確
-
-不過 PTZ 控制有個小缺點
-
-透過 Reolink 整合的 PTZ 上下左右觸發後不會自動停止
-
-直到移動到底或主動按下`PTZ停止`按鈕
-
-這點在使用上稍微不便
-
-但整體來說功能還算完整
+> 有兩個容易混淆的詞彙，Scrypted、Scrypted NVR，前者是免費的，後者要付費訂閱，請自行釐清
 
 ### 注意事項
 
@@ -304,7 +280,7 @@ AI 偵測功能也還算準確
 
 是無法直接支援加入 Home Assistant Reolink 官方整合
 
-但是現在沒有市售這種型號的 E1 Pro
+但是現在早已經沒有市售舊版型號的 E1 Pro
 
 如果是在二手交易市場的話才要注意硬體版本問題
 
@@ -324,25 +300,84 @@ AI 偵測功能也還算準確
 
 可嘗試將攝影機設定從 TCP 更改為 HTTP
 
-#### 常見問題排除
+### 常見問題
 
-**無法在 Home Assistant 中看到攝影機**
+#### **如何使用壁掛安裝**
+
+原廠有附贈天花板壁掛安裝套件
+
+採用旋轉卡扣如下圖
+
+![](attachments/reolink_e1_pro/mounting_installation.jpg)
+
+
+#### **無法在 Home Assistant 中看到攝影機**
 
 - 確認攝影機硬體版本是否支援（需 5MP 或以上）
-- 檢查 RTSP/ONVIF 功能是否已啟用
 - 確認 IP 位址、帳號密碼是否正確
 - 檢查網路連線是否正常
 
-**影像串流延遲或卡頓**
+#### **影像串流延遲或卡頓**
 
 - 檢查網路頻寬是否充足
 - 嘗試切換到 5GHz Wi-Fi 頻段或使用 Ethernet
 - 降低串流解析度設定
 
-**PTZ 控制無法使用**
+#### **PTZ 控制不會停止**
 
-- ONVIF 整合可能無法完全支援 PTZ 功能
-- 建議使用 Reolink 官方整合以獲得完整功能
+這是Reolink整合的限制
+
+PTZ控制觸發後不會停止
+
+直到呼叫`PTZ停止`或物理角度抵達盡頭
+
+PTZ控制邏輯需要自行處理
+
+例如寫一個腳本搭配虛擬按扭
+
+每次移動0.1秒後停止
+
+#### **如何把攝影機重設原廠設定**
+
+如果還能軟體控制，將畫面往上移直到裸露SD卡槽。
+
+如果失去控制方法，手動用力將攝影機往上移，露出SD卡槽。
+
+> 手動方案盡量少執行，可能對產品結構有不良影響
+
+通電狀態下長按旁邊的reset按鈕直到提示音響起，此時斷電重啟就能重新配對裝置。
+
+#### **忘記攝影機密碼**
+
+把攝影機重設原廠設定（請參考「[如何把攝影機重設原廠設定](#如何把攝影機重設原廠設定)」）
+
+#### **配對到一半失敗，且無法再次配對**
+
+把攝影機重設原廠設定（請參考「[如何把攝影機重設原廠設定](#如何把攝影機重設原廠設定)」）
+
+#### **已經走 Wi-Fi 無線網路，可以改有線網路嗎？**
+
+可以，並且**推薦**這麼做，有線乙太網路是最穩的方案
+
+隨時插入有線網路並重新啟動攝影機
+
+攝影機會優先使用有線網路介面來連線
+
+> 攝影機內建的有線/無線的網卡不同，所以取得的IP會不一樣
+
+## 個人小廣告
+
+有在幫忙做淘寶代購智能產品
+
+會配合淘寶的各大購物節調整預售價格
+
+> 618、雙11、以及其他不定時出現的購物節
+
+優惠價請參考預購商城，現貨通常不會調降
+
+商城電子名片（預購/現貨/雜貨）
+
+https://linktr.ee/hardy3c
 
 ## 免責聲明
 
